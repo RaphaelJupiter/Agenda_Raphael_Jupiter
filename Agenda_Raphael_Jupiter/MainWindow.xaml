@@ -52,21 +52,21 @@
 
                         <!--Menu Buttons-->
                         <StackPanel DockPanel.Dock="Top" >
-                            <Button Style="{StaticResource menuButton}">
+                            <Button Style="{StaticResource menuButton}" Click="CalendrierButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="HomeVariant" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="calendrier"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Style="{StaticResource menuButton}">
+                            <Button Style="{StaticResource menuButton}" Click="TodoListButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="CalendarClock" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="To do list"/>
                                 </StackPanel>
                             </Button>
 
-                            <Button Style="{StaticResource menuButton}" Background="#7B5CD6" Foreground="White">
+                            <Button Style="{StaticResource menuButton}" Background="#7B5CD6" Foreground="White" Click="ContactsButton_Click">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="AccountMultipleOutline" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="Contacts"/>
@@ -166,7 +166,7 @@
                            Panel.ZIndex="1" Text="Search in Members ..."
                            Visibility="{Binding ElementName=textBoxFilter, Converter={StaticResource BoolToVis}}" />
 
-                    <TextBox Name="textBoxFilter" Style="{StaticResource filterTextBox}"/>
+                    <TextBox Name="textBoxFilter" Style="{StaticResource filterTextBox}" TextChanged="TextBoxSearch_TextChanged"/>
                 </Grid>
 
                 <!--Members Data Grid-->
@@ -240,7 +240,7 @@
                 
 
             </Grid>
-
+            <Frame x:Name="MainFrame" Grid.Column="1" Margin="30 20 20 20" NavigationUIVisibility="Hidden"/>
         </Grid>
     </Border>
 </Window>
