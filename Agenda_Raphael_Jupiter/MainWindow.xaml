@@ -13,12 +13,16 @@
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
     </Window.Resources>
 
+    
+
     <Border CornerRadius="30" Background="#EFF2F7" MouseDown="Border_MouseDown" MouseLeftButtonDown="Border_MouseLeftButtonDown">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="200"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
+            
+            
 
             <!--Left Menu-->
             <Grid>
@@ -66,7 +70,7 @@
                                 </StackPanel>
                             </Button>
 
-                            <Button Style="{StaticResource menuButton}" Background="#7B5CD6" Foreground="White" Click="ContactsButton_Click">
+                            <Button Style="{StaticResource menuButton}" Background="#7B5CD6" Foreground="White">
                                 <StackPanel Orientation="Horizontal">
                                     <Icon:PackIconMaterial Kind="AccountMultipleOutline" Style="{StaticResource menuButtonIcon}"/>
                                     <TextBlock Text="Contacts"/>

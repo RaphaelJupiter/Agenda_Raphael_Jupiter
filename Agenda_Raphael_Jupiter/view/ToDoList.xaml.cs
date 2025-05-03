@@ -80,5 +80,11 @@ namespace Agenda_Raphael_Jupiter
         {
             DragMove();
         }
+        private void ContactsButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainWindow = new MainWindow(); 
+            mainWindow.Show();                       
+            this.Close();                            
+        }
     }
 }

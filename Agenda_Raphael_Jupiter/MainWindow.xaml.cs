@@ -144,9 +144,11 @@ namespace Agenda_Raphael_Jupiter
 
         private void TodoListButton_Click(object sender, RoutedEventArgs e)
         {
-            MainFrame.Navigate(new TodoList());
+            ToDoListPage todoWindow = new ToDoListPage();
+            todoWindow.Show();
+            this.Close(); 
         }
-   
+
 
 
     }
